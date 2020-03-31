@@ -54,3 +54,43 @@ Editor.builtinPlugins = [
 	Paragraph
 ];
 
+Editor.defaultConfig = {
+	toolbar: {
+		items: [
+			'heading',
+			'|',
+			'bold',
+			'italic',
+			'link',
+			'bulletedList',
+			'numberedList',
+			'|',
+			'indent',
+			'outdent',
+			'|',
+			'imageUpload',
+			'blockQuote',
+			'insertTable',
+			'mediaEmbed',
+			'undo',
+			'redo',
+			'|',
+			'removeFormat'
+		]
+	},
+	language: 'en',
+	image: {
+		toolbar: [
+			'imageTextAlternative',
+			'imageStyle:full',
+			'imageStyle:side'
+		]
+	},
+	table: {
+		contentToolbar: [
+			'tableColumn',
+			'tableRow',
+			'mergeTableCells'
+		]
+	},
+};
