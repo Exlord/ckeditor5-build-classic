@@ -34,5 +34,8 @@
   },
   "scripts": {
     "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-word-count": "^18.0.0"
   }
 }

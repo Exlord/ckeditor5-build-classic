@@ -25,6 +25,7 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js'
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 export default class Editor extends ClassicEditor {}
 
@@ -51,7 +52,8 @@ Editor.builtinPlugins = [
 	RemoveFormat,
 	SimpleUploadAdapter,
 	Essentials,
-	Paragraph
+	Paragraph,
+	WordCount
 ];
 
 Editor.defaultConfig = {
