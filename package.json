@@ -16,7 +16,7 @@
     "@ckeditor/ckeditor5-heading": "^18.0.0",
     "@ckeditor/ckeditor5-image": "^18.0.0",
     "@ckeditor/ckeditor5-indent": "^18.0.0",
-    "@ckeditor/ckeditor5-link": "git+https://git@github.com/Exlord/ckeditor5-link.git#absoluteurl",
+    "@ckeditor/ckeditor5-link": "^18.0.0",
     "@ckeditor/ckeditor5-list": "^18.0.0",
     "@ckeditor/ckeditor5-media-embed": "^18.0.0",
     "@ckeditor/ckeditor5-paragraph": "^18.0.0",
@@ -36,8 +36,6 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-ui": "^18.0.0",
-    "@ckeditor/ckeditor5-word-count": "^18.0.0",
-    "ckeditor5-custom-link": "git+https://git@github.com/Exlord/ckeditor5-link.git#absoluteurl"
+    "@ckeditor/ckeditor5-word-count": "^18.0.0"
   }
 }
