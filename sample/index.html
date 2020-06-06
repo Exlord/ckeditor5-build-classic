@@ -119,55 +119,26 @@
 	<script src="../build/ckeditor.js"></script>
 	<script>ClassicEditor
       .create(document.querySelector('.editor'), {
-
-        toolbar   : {
-          items: [
-            'heading',
-            '|',
-            'bold',
-            'italic',
-            'link',
-            'bulletedList',
-            'numberedList',
-            '|',
-            'indent',
-            'outdent',
-            '|',
-            'imageUpload',
-            'blockQuote',
-            'insertTable',
-            'mediaEmbed',
-            'undo',
-            'redo',
-            '|',
-            'removeFormat'
-          ]
-        },
-        language  : 'en',
-        image     : {
-          toolbar: [
-            'imageTextAlternative',
-            'imageStyle:full',
-            'imageStyle:side'
-          ]
-        },
-        table     : {
-          contentToolbar: [
-            'tableColumn',
-            'tableRow',
-            'mergeTableCells'
-          ]
-        },
-        licenseKey: '',
         link      : {
           // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
           addTargetToExternalLinks: true,
           forceAbsoluteLink       : true,
-        }
+        },
+
       })
       .then(editor => {
         window.editor = editor;
+        editor.editing.view.document.on( 'enter', ( evt, data ) => {
+          if ( data.isSoft ) {
+            editor.execute( 'enter' );
+          } else {
+            editor.execute( 'shiftEnter' );
+          }
 
+          data.preventDefault();
+          evt.stop();
+          editor.editing.view.scrollToTheSelection();
+        }, { priority: 'high' } );
       })
       .catch(error => {
         console.error('Oops, something gone wrong!');
