@@ -102,7 +102,7 @@ Editor.defaultConfig = {
 				view             : 'span',
 				title            : 'Inline Paragraph',
 				class            : 'ck-heading_paragraph_inline',
-				converterPriority: 'high'
+				converterPriority: 'highest'
 			},
 			{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
 			{ model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
